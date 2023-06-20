@@ -1,3 +1,6 @@
+/**
+ *Programprints a sentence
+ */
 #include <stdio.h>
 int main(void)
 {putchar('"');
