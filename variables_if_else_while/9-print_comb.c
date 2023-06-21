@@ -9,9 +9,18 @@
 int main(void)
 {
 int a;
-for (a = 0; a < 100; a++)
+for (a = 48; a < 58; a++)
+{
+if (a == 57)
 {
 putchar(a);
+}
+else
+{
+putchar(a);
+putchar(44);
+putchar(32);
+}
 }
 return (0);
 }
