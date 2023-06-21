@@ -1,5 +1,5 @@
 /**
-*Programprints a sentence
+*Description: Programprints a sentence
 *@main is the general program
 *@return works as the indicator that the program works
 */
