@@ -20,6 +20,10 @@ minutes1 = 0;
 for (minutes1 = 0; minutes1 < 6; minutes1++)
 {
 minutes2 = 0;
+if (hours1 == 2 && hours2 == 4)
+{
+return;
+}
 for (minutes2 = 0; minutes2 < 10; minutes2++)
 {
 n = hours1 + 48;
@@ -33,10 +37,6 @@ n = minutes2 + 48;
 _putchar(n);
 _putchar('\n');
 }
-}
-if (hours1 == 2 && hours2 == 4)
-{
-return;
 }
 }
 }
