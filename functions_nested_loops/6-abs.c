@@ -6,12 +6,16 @@
  *
  * Return: absolute value of number.
  */
-int _abs(int n)
+int _abs(int a)
 {
 int r;
-if (n < 0)
+if (a < 0)
 {
-r = (-n);
+r = (-a);
+}
+else
+{
+r = a;
 }
 return (r);
 }
