@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * _abs - prints absolute value
- * @n: number to be converted
+ * @a: number to be converted
  *
  * Return: absolute value of number.
  */
