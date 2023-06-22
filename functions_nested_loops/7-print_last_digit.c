@@ -13,11 +13,15 @@ if (d == 0)
 {
 r = 0;
 }
+else if (d < 0)
+{
+r = ((-d) % 10);
+}
 else
 {
 r = (d % 10);
 }
- c = (r+48);
+c = (r + 48);
 _putchar(c);
 return (r);
 }
