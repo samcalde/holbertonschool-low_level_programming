@@ -31,6 +31,7 @@ n = minutes1 + 48;
 _putchar(n);
 n = minutes2 + 48;
 _putchar(n);
+_putchar('\n');
 }
 }
 if (hours1 == 2 && hours2 == 4)
