@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main - Entry point
+ * print_alphaber_x10 - prints 10 times the alphabet, in lowercase, followed by a new line.
  *
- * Return: Always 0 (Success)
+ * Return: Void
  */
 void print_alphabet_x10(void)
 {
@@ -15,7 +15,7 @@ for (a = 97; a < 123; a++)
 {
 _putchar(a);
 }
-}
 _putchar('\n');
+}
 return;
 }
