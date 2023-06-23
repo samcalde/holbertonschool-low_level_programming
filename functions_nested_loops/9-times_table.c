@@ -11,7 +11,7 @@ int n2;
 int r;
 for (n1 = 0; n1 < 10; n1++)
 {
-_putchar(48);
+_putchar('0');
 for (n2 = 1; n1 < 10; n2++)
 {
 r = n1 * n2;
@@ -20,16 +20,16 @@ if (r < 10)
 {
 _putchar(' ');
 _putchar(' ');
-_putchar(r + 48);
+_putchar(r + '0');
 }
 if (r > 10)
 {
 _putchar(' ');
-_putchar(48 + (r / 10));
-_putchar(48 + (r % 10));
+_putchar('0' + (r / 10));
+_putchar('0' + (r % 10));
+}
 }
 _putchar('\n');
-}
 }
 return;
 }
