@@ -28,6 +28,7 @@ _putchar(' ');
 _putchar(48 + (r / 10));
 _putchar(48 + (r % 10));
 }
+_putchar('\n');
 }
 }
 return;
