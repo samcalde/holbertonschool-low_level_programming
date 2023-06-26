@@ -8,7 +8,7 @@
 int _isdigit(int c)
 {
 int i;
-int r;
+int r = 0;
 for (i = 48; i < 58; i++)
 {
 if (c == i)
