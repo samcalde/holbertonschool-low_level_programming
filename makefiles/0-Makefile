@@ -1,0 +1,2 @@
+all:
+	gcc 0-Makefile -o school
