@@ -18,8 +18,12 @@ for (s = 0; s < i; s++)
 _putchar(' ');
 }
 _putchar('\\');
-}
-}
 _putchar('\n');
+}
+}
+else
+{
+_putchar('\n');
+}
 return;
 }
