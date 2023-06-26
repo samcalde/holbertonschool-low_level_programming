@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code
+ * print_most_numbers - check the code
  *
  * Return: Always 0.
  */
@@ -14,5 +14,6 @@ if (i != 50 && i != 52)
 _putchar(i);
 }
 }
+_putchar('\n');
 return;
 }
