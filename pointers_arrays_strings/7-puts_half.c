@@ -13,10 +13,9 @@ for (i = 0; str[i] != '\0'; i++)
 {
 l = l + 1;
 }
-l = l - 1;
-for (i = 0; i < (l / 2); i++)
+ for (i = (l / 2); i <= l; i++)
 {
-_putchar(str[(l / 2) + i]);
+_putchar(str[i]);
 }
 _putchar('\n');
 return;
