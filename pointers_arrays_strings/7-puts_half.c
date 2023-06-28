@@ -13,7 +13,12 @@ for (i = 0; str[i] != '\0'; i++)
 {
 l = l + 1;
 }
- for (i = (l / 2); i <= l; i++)
+if (l % 2 == 1)
+{
+l = l - 1;
+}
+l = l / 2;
+for (i = l; i != '\0'; i++)
 {
 _putchar(str[i]);
 }
