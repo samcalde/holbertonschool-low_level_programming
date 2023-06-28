@@ -18,7 +18,7 @@ if (l % 2 == 1)
 l = l - 1;
 }
 l = l / 2;
-for (i = l; i != '\0'; i++)
+for (i = l; str[i] != '\0'; i++)
 {
 _putchar(str[i]);
 }
