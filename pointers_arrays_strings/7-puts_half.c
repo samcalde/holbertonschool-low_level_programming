@@ -16,7 +16,7 @@ l = l + 1;
 l = l - 1;
 for (i = 0; i < (l / 2); i++)
 {
-_putchar(str[l - i]);
+_putchar(str[(l / 2) + i]);
 }
 _putchar('\n');
 return;
