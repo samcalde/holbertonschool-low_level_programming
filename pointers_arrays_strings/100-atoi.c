@@ -12,6 +12,8 @@ int _atoi(char *s)
 	int l;
 	char n = 'f';
 	char p = 'p';
+	int d = 0;
+	int r = 0;
 
 	while (n == 'f')
 	{
@@ -22,13 +24,21 @@ int _atoi(char *s)
 		for (l = 0; l < 10; l++)
 		{
 			if (s[i] == l)
-				n = 't';
+			{
+				d++;
+				do {
+					n = 'f';
+					i++;
+					for (l = 0; l < 10; l++)
+						{
+							if (s[i] == l)
+								n = 't';
+						}
+				} while (n == 't');
+			}
 		}
 		i++;
 	}
-
-	if (p == 'n')
-		putchar('-');
 	i = i - 1;
 
 	do {
