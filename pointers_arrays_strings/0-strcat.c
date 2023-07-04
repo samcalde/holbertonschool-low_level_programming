@@ -21,9 +21,10 @@ while (dest[l])
 {
 l++;
 }
-for (p = 0; p <= l; p++)
+for (p = 0; p <= i; p++)
 {
-src[i] = dest[p];
+dest[l] = src[p];
+l++;
 }
 return (dest);
 }
