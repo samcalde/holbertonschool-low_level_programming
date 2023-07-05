@@ -28,6 +28,7 @@ if (s2[i] == '\0' && s1[i] == '\0')
 {
 return (r);
 }
+i++;
 } while (r == 0);
 return (r);
 }
