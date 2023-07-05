@@ -11,17 +11,13 @@
 void reverse_array(int *a, int n)
 {
 int i;
-for (i = (n - 1); i >= 0; i--)
+int t;
+n = n - 1;
+for (i = 0; i <= (n / 2); i++)
 {
-printf("%d", a[i]);
-if (i != 0)
-{
-printf(", ");
-}
-else
-{
-return;
-}
+t = a[i];
+a[i] = a[n - i];
+a[n - i] = t;
 }
 return;
 }
