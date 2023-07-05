@@ -24,6 +24,10 @@ if (s2[i] == '\0' && s1[i] != '\0')
 r = 1;
 return (r);
 }
+if (s2[i] == '\0' && s1[i] == '\0')
+{
+return (r);
+}
 } while (r == 0);
 return (r);
 }
