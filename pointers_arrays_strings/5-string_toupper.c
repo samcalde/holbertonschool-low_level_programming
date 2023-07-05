@@ -13,11 +13,11 @@ int i = 0;
 int l;
 while (s[i])
 {
-for (l = 97; l <= 122; l++)
+for (l = 0; l < 26; l++)
 {
-if (s[i] == l)
+if (s[i] == l + 'a')
 {
-s[i] = s[i - 32];
+s[i] = s[i] - 32;
 }
 }
 i++;
