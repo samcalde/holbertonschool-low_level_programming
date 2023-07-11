@@ -26,10 +26,8 @@ int is_prime_number(int n)
 {
 	int r;
 
-	if (n < 1)
+	if (n < 2)
 		return (0);
-	if (n == 1)
-		return (1);
 	r = funct_prime(n, n - 1);
 	return (r);
 }
