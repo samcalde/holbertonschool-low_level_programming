@@ -9,11 +9,11 @@
  */
 int funct_root(int x, int t)
 {
-    if (t * t == x)
-        return (t);
-    if (t * t > x)
-        return (-1);
-    return (funct_root(x, t + 1));
+if (t * t == x)
+return (t);
+if (t * t > x)
+return (-1);
+return (funct_root(x, t + 1));
 }
 
 /**
