@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+/**
+ * main - prints name of the program
+ * @argv: arguments
+ * @argc: argument count
+ *
+ * Return: void
+ */
+void main(int argc, char *argv[])
+{
+	printf("%s", argv[0]);
+}
