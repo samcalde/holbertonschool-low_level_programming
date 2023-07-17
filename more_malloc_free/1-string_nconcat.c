@@ -17,7 +17,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *r;
 	unsigned int i;
 
-	if (ssl == NULL)
+	if (s2 == NULL)
 		ssl = 0;
 	if (n >= ssl)
 		n = ssl;
