@@ -13,14 +13,14 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int fsl = strlen(s1);
-	unsigned int ssl = strlen(s2);
+	unsigned int ssl;
 	char *r;
 	unsigned int i;
 
 	if (s2 == NULL)
 		ssl = 0;
-	if (s1 == NULL)
-		fsl = 0;
+	else
+		ssl = strlen(s2);
 	if (n >= ssl)
 		n = ssl;
 	r = malloc(sizeof(int) * (fsl + n - 1));
