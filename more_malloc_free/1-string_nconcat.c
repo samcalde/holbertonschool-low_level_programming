@@ -12,11 +12,15 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int fsl = strlen(s1);
+	unsigned int fsl;
 	unsigned int ssl;
 	char *r;
 	unsigned int i;
 
+	if (s1 == NULL)
+		fsl = 0;
+	else
+		fsl = strlen(s1);
 	if (s2 == NULL)
 		ssl = 0;
 	else
