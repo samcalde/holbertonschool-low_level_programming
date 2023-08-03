@@ -11,10 +11,10 @@
  */
 size_t print_list(const list_t *h)
 {
-	list_t *nextelement = (list_t *)h;
-	int nodes = 0;
+list_t *nextelement = (list_t *)h;
+int nodes = 0;
 
-	while (nextelement != NULL)
+ while (nextelement != NULL)
 	{
 		if (nextelement->str == NULL)
 		{
