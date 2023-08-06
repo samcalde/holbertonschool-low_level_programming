@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * set_bit - prints the binary representation of a number
- * @index: index
- * @n: number
- *
- * Return: value
- */
+* set_bit - prints the binary representation of a number
+* @index: index
+* @n: number
+*
+* Return: value
+*/
 int set_bit(unsigned long int *n, unsigned int index)
 {
   unsigned long int mask;
