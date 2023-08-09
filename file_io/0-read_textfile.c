@@ -15,7 +15,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer = malloc(sizeof(char) * letters);
 	ssize_t readBytes;
-	ssize_t bytesWritten;
 	int fd;
 
 	if (filename == NULL || buffer == NULL)
@@ -26,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd < 0)
 		return (0);
 
-	readBytes = read(fd, buffer, sizeof(buffer));
+	readBytes = read(fd, buffer, sizeof(*buffer));
 
 	if (readBytes < 0)
 	{
@@ -34,19 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	bytesWritten = write(fd, buffer, sizeof(buffer));
-
-	if (bytesWritten < 0)
-	{
-		close(fd);
-		return (0);
-	}
-
-	if (readBytes == bytesWritten)
-	{
-		close(fd);
-		return (bytesWritten / sizeof(char));
-	}
+	printf("%s", buffer);
 	close(fd);
-	return (0);
+	return (readBytes / sizeof(char));
 }
