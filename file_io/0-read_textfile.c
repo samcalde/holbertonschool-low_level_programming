@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL || buffer == NULL)
 		return (0);
 
-	fd = open(filename, O_RDWR);
+	fd = open(filename, O_RDWR | O_RDONLY);
 
 	if (fd < 0)
 		return (0);
@@ -44,7 +44,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (readBytes == bytesWritten)
 	{
+		close(fd);
 		return (bytesWritten / sizeof(char));
 	}
+	close(fd);
 	return (0);
 }
