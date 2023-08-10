@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 	if (argc != 3 || buffer == NULL)
 		return (errors(97, file_from, buffer));
 
-	ffrom = open(file_from, O_RDWR, 0664);
-	fto = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 0664);
+	ffrom = open(file_from, O_RDONLY, 0664);
+	fto = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	if (ffrom < 0)
 		return (errors(98, file_from, buffer));
