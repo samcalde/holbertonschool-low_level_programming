@@ -7,8 +7,8 @@
 
 /**
  * main - copies the content of a file to another file
- * @file_from: source
- * @file_to: destination
+ * @argc: program name
+ * @argv: source/destination
  *
  * Return: (1) on success, error message
  */
@@ -63,27 +63,27 @@ int errors(int error, char *filename, char *buffer)
 {
 	if (error == 97)
 	{
-		printf("Usage: cp file_from file_to\n");
+		fprintf(stderr, "Usage: cp file_from file_to\n");
 		return (97);
 	}
 	if (error == 98)
 	{
 		free(buffer);
-		printf("Error: Can't read from file %s\n", filename);
+		fprintf(stderr, "Error: Can't read from file %s\n", filename);
 		return (98);
 	}
 	if (error == 99)
 	{
 		free(buffer);
-		printf("Error: Can't write to %s\n", filename);
+		fprintf(stderr, "Error: Can't write to %s\n", filename);
 		return (99);
 	}
 	if (error == 100)
 	{
 		free(buffer);
-		printf("Error: Can't close fd %s\n", filename);
+		fprintf(stderr, "Error: Can't close fd %s\n", filename);
 		return (100);
 	}
 
-	return (0);
+	return (1);
 }
