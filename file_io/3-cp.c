@@ -61,27 +61,33 @@ int main(int argc, char *argv[])
  */
 int errors(int error, char *filename, char *buffer)
 {
+	char errmsg[128];
+
 	if (error == 97)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
+		sprintf(errmsg, "Usage: cp file_from file_to\n");
+		write(STDERR_FILENO, errmsg, strlen(errmsg));
 		return (97);
 	}
 	if (error == 98)
 	{
 		free(buffer);
-		fprintf(stderr, "Error: Can't read from file %s\n", filename);
+		sprintf(errmsg, "Error: Can't read from file %s\n", filename);
+		write(STDERR_FILENO, errmsg, strlen(errmsg));
 		return (98);
 	}
 	if (error == 99)
 	{
 		free(buffer);
-		fprintf(stderr, "Error: Can't write to %s\n", filename);
+	    sprintf(errmsg, "Error: Can't write to %s\n", filename);
+		write(STDERR_FILENO, errmsg, strlen(errmsg));
 		return (99);
 	}
 	if (error == 100)
 	{
 		free(buffer);
-		fprintf(stderr, "Error: Can't close fd %s\n", filename);
+	    sprintf(errmsg, "Error: Can't close fd %s\n", filename);
+		write(STDERR_FILENO, errmsg, strlen(errmsg));
 		return (100);
 	}
 
