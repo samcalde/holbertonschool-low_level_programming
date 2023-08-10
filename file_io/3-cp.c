@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 		return (errors(100, file_to, buffer));
 
 	free(buffer);
-	return (1);
+	return (0);
 }
 
 /**
@@ -85,5 +85,5 @@ int errors(int error, char *filename, char *buffer)
 		return (100);
 	}
 
-	return (1);
+	return (0);
 }
