@@ -21,14 +21,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	index = key_index((const unsigned char *)key, ht->size);
 	currentnode = ht->array[index];
 	while (currentnode != NULL)
-    {
-        if (strcmp(currentnode->key, key) == 0)
-        {
-            value = currentnode->value;
-            return (value);
-        }
-        currentnode = currentnode->next;
-    }
+	{
+	if (strcmp(currentnode->key, key) == 0)
+	{
+		value = currentnode->value;
+		return (value);
+	}
+	currentnode = currentnode->next;
+	}
 
-    return (NULL);
+	return (NULL);
 }
