@@ -24,7 +24,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		if (currentnode->next == NULL)
 			return (NULL);
-			currentnode = currentnode->next;
+		currentnode = currentnode->next;
 	}
 
 	value = currentnode->value;
