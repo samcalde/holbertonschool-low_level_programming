@@ -22,7 +22,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	currentnode = ht->array[index];
 	while (*currentnode->key != *key)
 	{
-		if (*currentnode->next == NULL)
+		if (currentnode->next == NULL)
 			return (NULL);
 		currentnode = currentnode->next;
 	}
