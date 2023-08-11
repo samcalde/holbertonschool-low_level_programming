@@ -20,13 +20,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	index = key_index((const unsigned char *)key, ht->size);
 	currentnode = ht->array[index];
-	while (*currentnode->key != *key && currentnode->next != NULL)
+	while (*currentnode->key != *key)
 	{
+		if (*currentnode->next == NULL)
+			return (NULL);
 		currentnode = currentnode->next;
 	}
 
-	if (currentnode->next == NULL)
-		return (NULL);
 	value = currentnode->value;
 	return (value);
 }
