@@ -66,20 +66,20 @@ int errors(int error, char *filename, char *buffer)
 	if (error == 97)
 	{
 		sprintf(errmsg, "Usage: cp file_from file_to\n");
-		write(STDERR_FILENO, errmsg, strlen(errmsg));
+		write(2, errmsg, strlen(errmsg));
 		return (97);
 	}
 	if (error == 98)
 	{
 		free(buffer);
 		sprintf(errmsg, "Error: Can't read from file %s\n", filename);
-		write(STDERR_FILENO, errmsg, strlen(errmsg));
+		write(2, errmsg, strlen(errmsg));
 		return (98);
 	}
 	if (error == 99)
 	{
 		sprintf(errmsg, "Error: Can't write to %s\n", filename);
-		write(STDERR_FILENO, errmsg, strlen(errmsg));
+		write(2, errmsg, strlen(errmsg));
 		free(buffer);
 		return (99);
 	}
@@ -87,7 +87,7 @@ int errors(int error, char *filename, char *buffer)
 	{
 		free(buffer);
 	    sprintf(errmsg, "Error: Can't close fd %s\n", filename);
-		write(STDERR_FILENO, errmsg, strlen(errmsg));
+		write(2, errmsg, strlen(errmsg));
 		return (100);
 	}
 
