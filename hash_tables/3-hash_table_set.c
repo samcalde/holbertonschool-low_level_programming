@@ -30,10 +30,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	newnode->value = strdup(value);
 	index = key_index((const unsigned char *)key, ht->size);
+	currentnode = ht->array[index];
 
 	if (currentnode->key != key)
 	{
-	currentnode = ht->array[index];
 	newnode->next = currentnode;
 	ht->array[index] = newnode;
 	}
