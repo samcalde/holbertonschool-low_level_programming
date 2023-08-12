@@ -32,12 +32,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, ht->size);
 	currentnode = ht->array[index];
 
-	if (currentnode->key != key)
+	while (currentnode != NULL)
 	{
+		if(currentnode->key == key)
+		{
+			currentnode->value = strdup(value);
+			return (1);
+		}
+	}
+
 	newnode->next = currentnode;
 	ht->array[index] = newnode;
-	}
-	else
-		currentnode->value = strdup(value);
+
 	return (1);
 }
