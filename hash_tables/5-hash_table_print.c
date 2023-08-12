@@ -30,7 +30,7 @@ void hash_table_print(const hash_table_t *ht)
 				first = 'f';
 			}
 			else if (currentnode->key != NULL)
-				printf(", '%s': '%s'", currentnode->key, currentnode->value);	
+				printf(", '%s': '%s'", currentnode->key, currentnode->value);
 			currentnode = currentnode->next;
 		}
 	}
