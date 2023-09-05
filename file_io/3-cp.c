@@ -80,7 +80,7 @@ int errors(int error, char *filename, char *buffer)
 	{
 		free(buffer);
 		sprintf(errmsg, "Error: Can't write to %s\n", filename);
-		write(2, errmsg, strlen(errmsg));
+		write(STDERR_FILENO, errmsg, strlen(errmsg));
 		return (99);
 	}
 	if (error == 100)
