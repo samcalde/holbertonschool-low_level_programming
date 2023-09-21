@@ -25,9 +25,9 @@ int binary_search(int *array, size_t size, int value)
 				printf(", ");
 			printf("%d", array[i]);
 		}
-    	printf("\n");
+		printf("\n");
 		if (value == array[(span / 2) + min])
-			return((span / 2) + min);
+			return ((span / 2) + min);
 		else if (value < array[(span / 2) + min])
 			max = span / 2;
 		else if (value >= array[(span / 2) + min])
